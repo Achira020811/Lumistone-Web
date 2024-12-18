@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LumiStone - Our Team</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+    <!-- Added Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="font-sans antialiased text-gray-900">
-  <header class="bg-gray-900 text-white py-4 px-6 header">
+  <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header ">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
         <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
@@ -17,11 +20,11 @@
       </div>
       <nav>
         <ul class="flex space-x-4">
-          <li><a href="Home.html" class="hover:text-gray-400">Home</a></li>
-          <li><a href="intro.html" class="hover:text-gray-400">How It Works</a></li>
-          <li><a href="features.html" class="hover:text-gray-400">Features</a></li>
-          <li><a href="about-team.html" class="hover:text-gray-400 active">Our Team</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+          <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 active flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>Our Team</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -33,7 +36,10 @@
         <img src="Resources/pexels-magda-ehlers-pexels-4611324.jpg" alt="Team Background" class="w-full h-full object-cover">
       </div>
       <div class="container mx-auto px-4 text-center text-white relative z-10">
-        <h1 class="text-4xl font-bold mb-4">Meet Our Innovative Team</h1>
+        <h1 class="text-4xl font-bold mb-4 flex justify-center items-center">
+          <i class="fas fa-users mr-4"></i>
+          Meet Our Innovative Team
+        </h1>
         <p class="text-xl max-w-2xl mx-auto">Passionate experts dedicated to revolutionizing gem detection technology</p>
       </div>
     </section>
@@ -42,38 +48,38 @@
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Dr. Elena Rodriguez" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Dr. Elena Rodriguez</h3>
-            <p class="text-gray-600 mb-2">Chief Technology Officer</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-user-graduate mr-2 text-blue-500"></i>Dr. Elena Rodriguez</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-cog mr-2 text-gray-500"></i>Chief Technology Officer</p>
             <p class="text-gray-500 text-sm">Geophysicist with 15 years of experience in sensor technology and mineral detection.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Michael Chen" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Michael Chen</h3>
-            <p class="text-gray-600 mb-2">Lead AI Engineer</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-code mr-2 text-green-500"></i>Michael Chen</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-robot mr-2 text-gray-500"></i>Lead AI Engineer</p>
             <p class="text-gray-500 text-sm">Machine learning expert specializing in geological data processing and predictive algorithms.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Sarah Thompson" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Sarah Thompson</h3>
-            <p class="text-gray-600 mb-2">Head of Product Design</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Sarah Thompson</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Head of Product Design</p>
             <p class="text-gray-500 text-sm">Industrial designer with expertise in creating rugged, user-friendly technological solutions.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Sarah Thompson" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Sarah Thompson</h3>
-            <p class="text-gray-600 mb-2">Head of Product Design</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Sarah Thompson</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Head of Product Design</p>
             <p class="text-gray-500 text-sm">Industrial designer with expertise in creating rugged, user-friendly technological solutions.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Sarah Thompson" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Sarah Thompson</h3>
-            <p class="text-gray-600 mb-2">Head of Product Design</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Sarah Thompson</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Head of Product Design</p>
             <p class="text-gray-500 text-sm">Industrial designer with expertise in creating rugged, user-friendly technological solutions.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6 text-center shadow-md holders">
             <img src="Resources/images.png" alt="Sarah Thompson" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
-            <h3 class="text-xl font-semibold">Sarah Thompson</h3>
-            <p class="text-gray-600 mb-2">Head of Product Design</p>
+            <h3 class="text-xl font-semibold flex items-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Sarah Thompson</h3>
+            <p class="text-gray-600 mb-2 flex items-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Head of Product Design</p>
             <p class="text-gray-500 text-sm">Industrial designer with expertise in creating rugged, user-friendly technological solutions.</p>
           </div>
         </div>
@@ -83,17 +89,22 @@
 
   <footer class="bg-gray-900 text-white py-6 footer">
     <div class="container mx-auto px-4 flex justify-between items-center">
-      <div>
-        <p>&copy; 2024 Gem Detector. All rights reserved.</p>
+      <div class="flex items-center">
+        <i class="far fa-copyright mr-2"></i>
+        <p>2024 Gem Detector. All rights reserved.</p>
       </div>
       <div>
         <ul class="flex space-x-4">
-          <li><a href="#" class="hover:text-gray-400">Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-gray-400">Terms of Service</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400">Support</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
+  <!-- Initialize Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>

@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LumiStone - How It Works</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <!-- Added Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="font-sans antialiased text-gray-900">
   <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header ">
@@ -17,11 +20,11 @@
       </div>
       <nav>
         <ul class="flex space-x-4">
-          <li><a href="Home.html" class="hover:text-gray-400">Home</a></li>
-          <li><a href="intro.html" class="hover:text-gray-400 active">How It Works</a></li>
-          <li><a href="features.html" class="hover:text-gray-400">Features</a></li>
-          <li><a href="about-team.html" class="hover:text-gray-400">Our Team</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+          <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 active flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>Our Team</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -33,7 +36,10 @@
         <img src="Resources/pexels-magda-ehlers-pexels-4611324.jpg" alt="Gems Background" class="w-full h-full object-cover ">
       </div>
       <div class="container mx-auto px-4 text-center text-white  relative z-20">
-        <h1 class="text-4xl font-bold mb-4">How Gem Detector Works</h1>
+        <h1 class="text-4xl font-bold mb-4 flex justify-center items-center">
+          <i data-feather="radio" class="mr-4 h-10 w-10"></i>
+          How Gem Detector Works
+        </h1>
         <p class="text-xl max-w-2xl mx-auto">Cutting-edge technology that transforms gem exploration through advanced sensor fusion and intelligent algorithms</p>
       </div>
     </section>
@@ -42,17 +48,20 @@
       <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl font-bold mb-6">Multi-Spectral Sensor Technology</h2>
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+              <i data-feather="aperture" class="mr-4 h-8 w-8 text-blue-600"></i>
+              Multi-Spectral Sensor Technology
+            </h2>
             <p class="text-gray-600 mb-4">Our proprietary multi-spectral sensors combine multiple detection methods to identify gem signatures with unprecedented accuracy. By analyzing geological, electromagnetic, and mineralogical data simultaneously, we can detect gems hidden beneath various terrains.</p>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>Advanced electromagnetic frequency scanning</li>
-              <li>Thermal differential analysis</li>
-              <li>Mineral composition recognition</li>
-              <li>Ground penetrating radar integration</li>
+              <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Advanced electromagnetic frequency scanning</li>
+              <li class="flex items-center"><i data-feather="thermometer" class="mr-2 h-5 w-5 text-red-500"></i>Thermal differential analysis</li>
+              <li class="flex items-center"><i data-feather="compass" class="mr-2 h-5 w-5 text-green-500"></i>Mineral composition recognition</li>
+              <li class="flex items-center"><i data-feather="database" class="mr-2 h-5 w-5 text-purple-500"></i>Ground penetrating radar integration</li>
             </ul>
           </div>
           <div>
-            <img src="/api/placeholder/500/400" alt="Multi-Spectral Sensors" class="w-full rounded-lg shadow-lg">
+            <img src="Resources/multi-spectral-sensors.jpg" alt="Multi-Spectral Sensors" class="w-full rounded-lg shadow-lg object-cover h-96">
           </div>
         </div>
       </div>
@@ -62,16 +71,19 @@
       <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img src="/api/placeholder/500/400" alt="Intelligent Algorithms" class="w-full rounded-lg shadow-lg">
+            <img src="Resources/ai-data-processing.jpg" alt="Intelligent Algorithms" class="w-full rounded-lg shadow-lg object-cover h-96">
           </div>
           <div>
-            <h2 class="text-3xl font-bold mb-6">Intelligent Data Processing</h2>
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+              <i data-feather="cpu" class="mr-4 h-8 w-8 text-blue-600"></i>
+              Intelligent Data Processing
+            </h2>
             <p class="text-gray-600 mb-4">Our advanced AI algorithms transform raw sensor data into actionable insights. Machine learning models continuously improve detection accuracy by analyzing historical gem discovery patterns and geological contexts.</p>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>Real-time data analysis</li>
-              <li>Machine learning enhancement</li>
-              <li>Predictive geological mapping</li>
-              <li>Cloud-based intelligence network</li>
+              <li class="flex items-center"><i data-feather="activity" class="mr-2 h-5 w-5 text-green-500"></i>Real-time data analysis</li>
+              <li class="flex items-center"><i data-feather="trending-up" class="mr-2 h-5 w-5 text-blue-500"></i>Machine learning enhancement</li>
+              <li class="flex items-center"><i data-feather="map" class="mr-2 h-5 w-5 text-red-500"></i>Predictive geological mapping</li>
+              <li class="flex items-center"><i data-feather="cloud" class="mr-2 h-5 w-5 text-indigo-500"></i>Cloud-based intelligence network</li>
             </ul>
           </div>
         </div>
@@ -80,31 +92,28 @@
 
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8">The Complete Gem Detection Workflow</h2>
+        <h2 class="text-3xl font-bold mb-8 flex justify-center items-center">
+          <i data-feather="layers" class="mr-4 h-10 w-10 text-gray-700"></i>
+          The Complete Gem Detection Workflow
+        </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-gray-50 p-6 rounded-lg shadow-md">
             <div class="bg-[#FFFBCB] rounded-full p-4 inline-block mb-4">
-              <svg class="w-10 h-10 text-[#BA8B02] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+              <i data-feather="image" class="w-10 h-10 text-[#BA8B02] mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Data Collection</h3>
             <p class="text-gray-600">Multi-spectral sensors capture comprehensive geological data</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg shadow-md">
             <div class="bg-[#CFFAFE] rounded-full p-4 inline-block mb-4">
-              <svg class="w-10 h-10 text-[#0891B2] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+              <i data-feather="shield" class="w-10 h-10 text-[#0891B2] mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">AI Processing</h3>
             <p class="text-gray-600">Machine learning algorithms analyze and interpret data</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg shadow-md">
             <div class="bg-[#D1FAE5] rounded-full p-4 inline-block mb-4">
-              <svg class="w-10 h-10 text-[#047857] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <i data-feather="search" class="w-10 h-10 text-[#047857] mx-auto"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Gem Identification</h3>
             <p class="text-gray-600">Precise location and characteristics of potential gem deposits</p>
@@ -112,21 +121,28 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="bg-gray-900 text-white py-6 footer">
     <div class="container mx-auto px-4 flex justify-between items-center">
-      <div>
-        <p>&copy; 2024 Gem Detector. All rights reserved.</p>
+      <div class="flex items-center">
+        <i class="far fa-copyright mr-2"></i>
+        <p>2024 Gem Detector. All rights reserved.</p>
       </div>
       <div>
         <ul class="flex space-x-4">
-          <li><a href="#" class="hover:text-gray-400">Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-gray-400">Terms of Service</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400">Support</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <!-- Initialize Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>
