@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; */
+     /* color: #1a202c; */
+   
+  /* } */ */
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color:#903763;
+    /* color: #fff;
+    padding: 1rem; */
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 2.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #d2d6dc;
+  }
+  
+  /* Hero Styles */
+  .hero {
+    background: linear-gradient(to right, #E49CB4, #edbece) ;
+    color: #fff;
+    padding: 4rem 1rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    flex-basis: 50%;
+    max-width: 600px;
+    margin-right: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    background-color: #fff;
+    color: #1a202c;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-cta:hover {
+    background-color: #f4f5f7;
+  }
+  
+  .hero-image {
+    flex-basis: 50%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50px;
+    
+  }
+  
+  .hero-image img {
+    width: 100%;
+  height: auto;
+  }
+  
+  /* Features Styles */
+  .features {
+    padding: 3rem 1rem;
+    background-color: #f4f5f7;
+  }
+  
+  .features-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .feature-icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-description {
+    color: #4a5568;
+  }
+  
+  /* Testimonials Styles */
+  .testimonials {
+    background-color: #1a202c;
+    color: #fff;
+    padding: 3rem 1rem;
+  }
+  
+  .testimonials-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-card {
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-avatar {
+    width: 3rem;
+    
+  }
+  .footer{
+    background-color:#903763;
+  }
+
+  .contact-button{
+    background-color: #A78BFA;
+  }
+  .holders{
+    background-color:#F3F4F6 ;
+  }
+  a.active{
+    color:#f082b3 ;
+    
+  }
+  
