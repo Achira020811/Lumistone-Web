@@ -74,6 +74,17 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    height: 85vh;
+  }
+  .hero1 {
+    background: linear-gradient(to right, #E49CB4, #edbece) ;
+    color: #fff;
+    padding: 4rem 1rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
   }
   
   .hero-content {
