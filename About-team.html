@@ -76,7 +76,7 @@
       height: 200px; /* Increased size */
       border-radius: 50%; /* Make it circular */
       overflow: hidden; /* Ensure the image stays within the circle */
-      border: 4px solid white; /* Thicker border */
+      border: 2px solid white; /* Thicker border */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow */
       margin-left: 2rem; /* Add some spacing from the content */
     }
@@ -114,7 +114,7 @@
       border-radius: 50%;
       margin: 1rem auto;
       object-fit: cover;
-      border: 2px solid white;
+      border: 1.5px solid white;
     }
 
     .team-card h3 {
@@ -197,7 +197,7 @@
             <i data-feather="grid" class="mr-2 h-5 w-5"></i>Features
           </a></li>
           <li><a href="about-team.html" class="hover:text-gray-400 active flex items-center">
-            <i data-feather="users" class="mr-2 h-5 w-5"></i>Our Team
+            <i data-feather="users" class="mr-2 h-5 w-5"></i>About Us
           </a></li>
           <li><a href="contact.html" class="hover:text-gray-400 flex items-center">
             <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
@@ -238,44 +238,49 @@
       <!-- First Row: 4 Boxes -->
       <div class="grid md:grid-cols-4 gap-4 mb-8">
         <!-- Team Member 1 -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Dr. Elena Rodriguez', 'elena@example.com', 'https://github.com/elena', 'https://linkedin.com/in/elena', 'Geophysicist with 15 years of experience in sensor technology and mineral detection.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="Dr. Elena Rodriguez">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-user-graduate mr-2 text-blue-500"></i>Dr. Elena Rodriguez</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cog mr-2 text-gray-500"></i>Chief Technology Officer</p>
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Irushi Hettiarachchi', 'isha.tnja02@gmail.com', 'https://github.com/shavi-shavi','https://www.linkedin.com/in/irushi-shavindya-2076702aa?', 'I am a passionate back-end developer specializing in machine learning and database management. As the team leader of this project, I have focused on building a smart and efficient system for gemstone detection  and water scanning. My expertise lies in developing AI models, optimizing databases, and ensuring seamless data processing. I thrive on solving complex problems and turning raw data into meaningful insights, making technology work smarter for real-world applications.', 'Resources/Irushi .jpg')">
+          <img src="Resources/Irushi .jpg" alt="Irushi Hettiarachchi">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-user-graduate mr-2 text-blue-500"></i>Irushi Hettiarachchi 
+          </h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cog mr-2 text-gray-500"></i>Group Leader/ Back end developer
+          </p>
         </div>
         <!-- Team Member 2 -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Michael Chen', 'michael@example.com', 'https://github.com/michael', 'https://linkedin.com/in/michael', 'Machine learning expert specializing in geological data processing and predictive algorithms.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="Michael Chen">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-code mr-2 text-green-500"></i>Michael Chen</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-robot mr-2 text-gray-500"></i>Lead AI Engineer</p>
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Akila Kaluarachchi', 'K.a.akilainduwara@gmail.com', 'https://www.linkedin.com/in/akila-induwara', 'https://www.linkedin.com/in/akila-induwara-kaluarachchi', 'I am a dedicated back-end developer with expertise in machine learning and data management. My role in this project involved collecting and processing datasets, developing ML models for gemstone detection, soil analysis, and water scanning. I focused on ensuring accurate predictions and seamless integration of AI into the system. Passionate about data-driven solutions, I strive to make technology smarter and more efficient for real-world applications.', 'Resources/Akila .jpg')">
+          <img src="Resources/Akila .jpg" alt="Akila Kaluarachchi">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-code mr-2 text-green-500"></i>Akila Kaluarachchi</h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-robot mr-2 text-gray-500"></i>Data Annalists/ Back end developer</p>
         </div>
         <!-- Team Member 3 -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Sarah Thompson', 'sarah@example.com', 'https://github.com/sarah', 'https://linkedin.com/in/sarah', 'Industrial designer with expertise in creating rugged, user-friendly technological solutions.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="Sarah Thompson">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Sarah Thompson</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Head of Product Design</p>
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Achira Senadheera ', 'AchiraUwanpriya@gmail.com', 'https://github.com/Achira020811', 'https://www.linkedin.com/in/achira-senadheera-061535271', 'I am a front-end developer with a passion for building intuitive and visually engaging user interfaces. In this project, I focused on designing and developing the web and mobile application, ensuring a seamless user experience. My work involved integrating the AI-powered backend into a responsive and easy-to-use interface, making complex data insights accessible to users. I strive to create interactive and efficient applications that enhance usability and functionality.', 'Resources/Achira .jpg')">
+          <img src="Resources/Achira .jpg" alt="Sarah Thompson">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Achira Senadheera </h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Web designer/Front End developer 
+          </p>
         </div>
         <!-- Team Member 4 -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('John Doe', 'john@example.com', 'https://github.com/john', 'https://linkedin.com/in/john', 'Seasoned project manager leading the integration of AI in the development of gem detection technology.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="John Doe">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-users mr-2 text-yellow-500"></i>John Doe</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-briefcase mr-2 text-gray-500"></i>Project Manager</p>
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Dulmi Dissanayaka', 'dilmi.20230545@iit.ac.lk', 'https://github.com/DulDissanayake', 'https://www.linkedin.com/in/dulmi-dissanayake-665419306/', 'I am a UI/UX designer and front-end developer who loves creating intuitive and visually engaging digital experiences. My passion lies in designing seamless user interfaces and bringing them to life with clean, responsive front-end development. In this project, I focused on crafting an interactive and user-friendly design while ensuring smooth integration with the AI-powered backend. I thrive on making technology both functional and aesthetically appealing, turning complex systems into effortless user experiences.', 'Resources/Dulmi .jpg')">
+          <img src="Resources/Dulmi .JPG" alt="Dulmi Dissanayaka">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-users mr-2 text-yellow-500"></i>Dulmi Dissanayaka</h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-briefcase mr-2 text-gray-500"></i>UI/UX designer / Front end developer</p>
         </div>
       </div>
 
       <!-- Second Row: 2 Boxes -->
       <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-        <!-- Team Member 5 - Lisa Fox -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Lisa Fox', 'lisa@example.com', 'https://github.com/lisa', 'https://linkedin.com/in/lisa', 'Expert in geospatial data and its application in mineral exploration and detection technology.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="Lisa Fox">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Lisa Fox</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cogs mr-2 text-gray-500"></i>Geospatial Analyst</p>
+        <!-- Team Member 5 -->
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Muhammadhu Innam Shadhir', 'shadhir.20232297@iit.ac.lk', 'https://github.com/Sadir77', 'https://www.linkedin.com/in/sadhir-innam-679b38336/', 'I am a back-end developer and API specialist with a strong passion for building scalable and efficient systems. In this project, I focused on developing the core backend architecture, handling data processing, and implementing machine learning models for accurate predictions. Additionally, I designed and optimized APIs to ensure seamless communication between the front-end and back-end, making data accessible in a fast and reliable way. My goal is to create robust, high-performance systems that power intelligent applications.', 'Resources/Sadeer .jpg')">
+          <img src="Resources/Sadeer .jpg" alt="Sadeer">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Muhammadhu Innam Shadhir
+          </h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cogs mr-2 text-gray-500"></i>Back end developer / API Engineer</p>
         </div>
-        <!-- Team Member 6 - James Smith -->
-        <div class="team-card text-center cursor-pointer holder" onclick="openModal('James Smith', 'james@example.com', 'https://github.com/james', 'https://linkedin.com/in/james', 'Passionate about user experience and bringing a seamless design to every product developed.', 'Resources/images.png')">
-          <img src="Resources/images.png" alt="James Smith">
-          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-pencil-ruler mr-2 text-orange-500"></i>James Smith</h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-laptop-code mr-2 text-gray-500"></i>UX/UI Designer</p>
+        <!-- Team Member 6  -->
+        <div class="team-card text-center cursor-pointer holder" onclick="openModal('Saumi Amaya', 'Saumi.20232266@iit.ac.lk', 'https://github.com/saumiamaya', 'https://www.linkedin.com/in/saumi-amaya-77a677311/', 'I am a front-end developer passionate about creating user-friendly and visually appealing interfaces. In this project, I focused on designing and developing the mobile and web app, ensuring a seamless and intuitive experience. My goal is to make complex AI-powered insights easily accessible to users through an interactive and responsive UI.', 'Resources/Saumi .jpg')">
+          <img src="Resources/Saumi .jpg" alt="Saumi ">
+          <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-pencil-ruler mr-2 text-orange-500"></i>Saumi Amaya
+          </h3>
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-laptop-code mr-2 text-gray-500"></i>Front end developer </p>
         </div>
       </div>
     </div>
