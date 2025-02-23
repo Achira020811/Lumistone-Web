@@ -8,6 +8,7 @@
   <title>LumiStone - Our Team</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     /* Custom Animations */
@@ -171,48 +172,36 @@
       background: linear-gradient(135deg, rgba(255, 205, 86, 0.9), rgba(255, 239, 213, 0.9));
     }
 
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, #6b46c1, #d53f8c);
-      color: white;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 0.5rem;
-      text-decoration: none;
-      transition: opacity 0.3s ease;
-    }
-
-    footer a:hover {
-      opacity: 0.8;
-    }
-
-    /* Hero Section Text Color */
-    .hero-text {
-      color: #4a5568; /* Matching color for the text */
-    }
+    
   </style>
 </head>
 
 <body class="font-sans antialiased text-gray-900">
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-4 px-6 fixed w-full z-50 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
+  <header class="bg-gray-900 text-white py-4 px-6 header">
+    <div class="flex justify-between items-center">
       <div class="flex items-center">
         <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
-        <a href="index.html" class="text-2xl font-semibold hover:text-gray-300 transition-colors">LumiStone</a>
+        <a href="z" class="text-lg font-medium">LumiStone</a>
       </div>
       <nav>
         <ul class="flex space-x-4">
-          <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
-          <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
-          <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
-          <li><a href="about-team.html" class="hover:text-gray-400 active flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>Our Team</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
+          <li><a href="Home.html" class="hover:text-gray-400  flex items-center">
+            <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
+          </a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works
+          </a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="grid" class="mr-2 h-5 w-5"></i>Features
+          </a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 active flex items-center">
+            <i data-feather="users" class="mr-2 h-5 w-5"></i>Our Team
+          </a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
+          </a></li>
         </ul>
       </nav>
     </div>
@@ -293,16 +282,31 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container mx-auto px-4">
-      <p class="text-sm">2024/2025 Gem Detector. All rights reserved.</p>
-      <div class="mt-2">
-        <a href="#" class="text-sm">Privacy Policy</a> |
-        <a href="#" class="text-sm">Terms of Service</a> |
-        <a href="#" class="text-sm">Support</a>
+  <footer class="bg-gray-900 text-white py-6 footer">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="far fa-copyright mr-2"></i>
+        <p>2025 Gem Detector. All rights reserved.</p>
+      </div>
+      <div>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-gray-400 flex items-center">
+            <i data-feather="lock" class="mr-2 h-5 w-5"></i>
+            Privacy Policy
+          </a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center">
+            <i data-feather="file-text" class="mr-2 h-5 w-5"></i>
+            Terms of Service
+          </a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="help-circle" class="mr-2 h-5 w-5"></i>
+            Support
+          </a></li>
+        </ul>
       </div>
     </div>
   </footer>
+
 
   <!-- Modal -->
   <div id="teamModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal" onclick="closeModal()">
