@@ -17,7 +17,7 @@
     color: inherit;
   }
   
-  ul {
+  dl {
     list-style: none;
   }
   
@@ -72,8 +72,8 @@
     padding: 4rem 1rem;
     display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: self-end;
     height: 85vh;
   }
   .hero1 {
