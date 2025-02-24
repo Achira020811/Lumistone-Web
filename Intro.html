@@ -10,132 +10,164 @@
   <link href="style.css" rel="stylesheet">
   <!-- Added Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1a202c;
+        padding: 1rem;
+        width: 100%;
+        z-index: 50;
+      }
+      
+      .mobile-menu li {
+        margin: 0.5rem 0;
+      }
+      
+      .hidden-menu {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body class="font-sans antialiased text-gray-900">
-  <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header ">
+  <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
         <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
         <a href="index.html" class="text-lg font-medium">LumiStone</a>
       </div>
-      <nav>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <i data-feather="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+      <nav class="hidden md:block">
         <ul class="flex space-x-4">
-          <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
+          <li><a href="index.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
           <li><a href="intro.html" class="hover:text-gray-400 active flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
           <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
           <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>About Us</a></li>
           <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
         </ul>
       </nav>
+      <div id="mobile-menu" class="hidden-menu md:hidden">
+        <ul class="mobile-menu">
+          <li><a href="index.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 active flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>About Us</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden">
       <div class="absolute inset-0 opacity-70">
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0 ">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0">
           <source src="Resources/vecteezy_diamond-4k-wedding-background_1804491.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="container mx-auto px-4 text-center text-white  relative z-20">
-        <h1 class="text-4xl font-bold mb-4 flex justify-center items-center">
-          <i data-feather="radio" class="mr-4 h-10 w-10"></i>
+      <div class="container mx-auto px-4 text-center text-white relative z-20">
+        <h1 class="text-2xl md:text-4xl font-bold mb-4 flex flex-col md:flex-row justify-center items-center">
+          <i data-feather="radio" class="mb-2 md:mb-0 md:mr-4 h-8 w-8 md:h-10 md:w-10"></i>
           How Gem Detector Works
         </h1>
-        <p class="text-xl max-w-2xl mx-auto">Cutting-edge technology that transforms gem exploration through advanced sensor fusion and intelligent algorithms</p>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">Cutting-edge technology that transforms gem exploration through advanced sensor fusion and intelligent algorithms</p>
       </div>
     </section>
-<section class="test">
-  
-  <section class="py-16 ">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl font-bold mb-6 flex items-center">
-            <i data-feather="aperture" class="mr-4 h-8 w-8 text-blue-600"></i>
-           Water level detection
-
-          </h2>
-          
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Understanding Resistivity: </li>
-            <pre class="text-gray-600 mb-4"> Different materials (rock, soil, water) conduct electricity differently.
+    
+    <section class="test">
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i data-feather="aperture" class="mr-4 h-6 w-6 md:h-8 md:w-8 text-blue-600"></i>
+                Water level detection
+              </h2>
+              
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Understanding Resistivity: </li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Different materials (rock, soil, water) conduct electricity differently.
           High resistivity → Dry soil, rock.
           Low resistivity → Water-saturated zones.
         </pre>
-            <li class="flex items-center"><i data-feather="thermometer" class="mr-2 h-5 w-5 text-red-500"></i>Collecting Data: </li>
-            <pre class="text-gray-600 mb-4"> Use an electrical resistivity meter to send current underground.
- Measure how much resistance the ground offers.
+                <li class="flex items-center"><i data-feather="thermometer" class="mr-2 h-5 w-5 text-red-500"></i>Collecting Data: </li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Use an electrical resistivity meter to send current underground.
+Measure how much resistance the ground offers.
               </pre>
-            <li class="flex items-center"><i data-feather="compass" class="mr-2 h-5 w-5 text-green-500"></i>Interpreting Resistivity Profiles:</li>
-            <pre class="text-gray-600 mb-4">Shallow depths with low resistivity → Possible surface water or wet soil.
+                <li class="flex items-center"><i data-feather="compass" class="mr-2 h-5 w-5 text-green-500"></i>Interpreting Resistivity Profiles:</li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Shallow depths with low resistivity → Possible surface water or wet soil.
 Deeper low-resistivity layers → Indicate a groundwater table.
               </pre>
-            <li class="flex items-center"><i data-feather="database" class="mr-2 h-5 w-5 text-purple-500"></i>Estimating Water Depth:
-            </li>
-            <pre class="text-gray-600 mb-4">Identify the depth at which resistivity drops significantly.
+                <li class="flex items-center"><i data-feather="database" class="mr-2 h-5 w-5 text-purple-500"></i>Estimating Water Depth:
+                </li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Identify the depth at which resistivity drops significantly.
 Cross-check with borehole data if available for accuracy.
                                          </pre>
-        <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Final Output: </li> 
-        <pre class="text-gray-600 mb-4">Depth of water is estimated by correlating low-resistivity zones with 
-known geological data.</pre>                                
-                                         
-          </ul>
+                <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Final Output: </li> 
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Depth of water is estimated by correlating low-resistivity zones with known geological data.</pre>                                
+              </ul>
+            </div>
+            <div class="order-first md:order-last mt-4 md:mt-0">
+              <img src="Resources/Water detection .jpg" alt="Multi-Spectral Sensors" class="w-full rounded-lg shadow-lg object-cover h-64 md:h-96 opacity-80">
+            </div>
+          </div>
         </div>
-        <div>
-          <img src="Resources/Water detection .jpg" alt="Multi-Spectral Sensors" class="w-full rounded-lg shadow-lg object-cover h-96 opacity-80">
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="py-16 ">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="Resources/gem detection .jpg" alt="Intelligent Algorithms" class="w-full rounded-lg shadow-lg object-cover h-96 opacity-80">
-        </div>
-        <div>
-          <h2 class="text-3xl font-bold mb-6 flex items-center">
-            <i data-feather="cpu" class="mr-4 h-8 w-8 text-blue-600"></i>
-            Gem detection
-          </h2>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li class="flex items-center"><i data-feather="activity" class="mr-2 h-5 w-5 text-green-500"></i>Understanding Magnetic Signatures</li>
-            <pre class="text-gray-600 mb-4">Certain gemstones (e.g., magnetite, pyrrhotite) have magnetic properties.
+      <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="order-last md:order-first mt-4 md:mt-0">
+              <img src="Resources/gem detection .jpg" alt="Intelligent Algorithms" class="w-full rounded-lg shadow-lg object-cover h-64 md:h-96 opacity-80">
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <i data-feather="cpu" class="mr-4 h-6 w-6 md:h-8 md:w-8 text-blue-600"></i>
+                Gem detection
+              </h2>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li class="flex items-center"><i data-feather="activity" class="mr-2 h-5 w-5 text-green-500"></i>Understanding Magnetic Signatures</li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Certain gemstones (e.g., magnetite, pyrrhotite) have magnetic properties.
 Surrounding rocks may also create unique magnetic anomalies.</pre>
-            <li class="flex items-center"><i data-feather="trending-up" class="mr-2 h-5 w-5 text-blue-500"></i>Collecting Magnetic Data</li>
-            <pre class="text-gray-600 mb-4">Use a magnetometer to measure variations in Earth's magnetic field.
+                <li class="flex items-center"><i data-feather="trending-up" class="mr-2 h-5 w-5 text-blue-500"></i>Collecting Magnetic Data</li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Use a magnetometer to measure variations in Earth's magnetic field.
 Conduct surveys in a grid pattern to map magnetic intensity. 
               </pre>
-            <li class="flex items-center"><i data-feather="map" class="mr-2 h-5 w-5 text-red-500"></i>Identifying Anomalies </li>
-            <pre class="text-gray-600 mb-4">High magnetic readings → Presence of iron-rich minerals 
+                <li class="flex items-center"><i data-feather="map" class="mr-2 h-5 w-5 text-red-500"></i>Identifying Anomalies </li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">High magnetic readings → Presence of iron-rich minerals 
 (possible gem indicators).
 Low magnetic areas → Non-magnetic host rocks.
 Sharp variations may indicate faults or mineral deposits where gems form.
               </pre>
-            <li class="flex items-center"><i data-feather="cloud" class="mr-2 h-5 w-5 text-indigo-500"></i>Determining Gem Location </li>
-            <pre class="text-gray-600 mb-4">Compare magnetic anomalies with geological maps.
+                <li class="flex items-center"><i data-feather="cloud" class="mr-2 h-5 w-5 text-indigo-500"></i>Determining Gem Location </li>
+                <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Compare magnetic anomalies with geological maps.
 Correlate with resistivity and ground-penetrating radar (GPR) for accuracy.
 Drill test samples in high anomaly zones to confirm gem presence.</pre>
-          </ul>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-</section>
-
+      </section>
+    </section>
   </main>
 
   <footer class="bg-gray-900 text-white py-6 footer">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <div class="flex items-center">
         <i class="far fa-copyright mr-2"></i>
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
       <div>
-        <ul class="flex space-x-4">
+        <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
           <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
           <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
           <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
@@ -147,6 +179,23 @@ Drill test samples in high anomaly zones to confirm gem presence.</pre>
   <!-- Initialize Feather Icons -->
   <script>
     feather.replace();
+    
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('hidden-menu')) {
+        mobileMenu.classList.remove('hidden-menu');
+      } else {
+        mobileMenu.classList.add('hidden-menu');
+      }
+    });
+    
+    // Close menu on window resize if screen becomes large
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        document.getElementById('mobile-menu').classList.add('hidden-menu');
+      }
+    });
   </script>
 </body>
 </html>
