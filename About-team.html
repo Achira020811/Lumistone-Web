@@ -172,7 +172,36 @@
       background: linear-gradient(135deg, rgba(255, 205, 86, 0.9), rgba(255, 239, 213, 0.9));
     }
 
-    
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .mobile-menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #1a202c;
+        padding: 1rem;
+        z-index: 20;
+      }
+      .mobile-menu-items.open {
+        display: flex;
+      }
+      .mobile-menu-items a {
+        padding: 0.5rem 0;
+      }
+    }
   </style>
 </head>
 
@@ -185,9 +214,11 @@
         <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
         <a href="Home.html" class="text-lg font-medium">LumiStone</a>
       </div>
-      <nav>
+      
+      <!-- Desktop Menu -->
+      <nav class="desktop-menu">
         <ul class="flex space-x-4">
-          <li><a href="Home.html" class="hover:text-gray-400  flex items-center">
+          <li><a href="Home.html" class="hover:text-gray-400 flex items-center">
             <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
           </a></li>
           <li><a href="intro.html" class="hover:text-gray-400 flex items-center">
@@ -204,6 +235,30 @@
           </a></li>
         </ul>
       </nav>
+      
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu">
+        <button id="menuToggle" class="focus:outline-none">
+          <i data-feather="menu" class="h-6 w-6"></i>
+        </button>
+        <div class="mobile-menu-items" id="mobileMenuItems">
+          <a href="Home.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
+          </a>
+          <a href="intro.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works
+          </a>
+          <a href="features.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="grid" class="mr-2 h-5 w-5"></i>Features
+          </a>
+          <a href="about-team.html" class="hover:text-gray-400 active flex items-center py-2">
+            <i data-feather="users" class="mr-2 h-5 w-5"></i>About Us
+          </a>
+          <a href="contact.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -217,26 +272,26 @@
       Your browser does not support the video tag.
     </video>
     <div class="container mx-auto px-4 text-center relative z-10 pt-12">
-      <h1 class="text-5xl font-bold mb-4 flex justify-center items-center animate-fade-in hero-text">
-        <i class="fas fa-users mr-4"></i>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 flex flex-col md:flex-row justify-center items-center animate-fade-in hero-text">
+        <i class="fas fa-users mb-2 md:mb-0 md:mr-4"></i>
         Meet Our Innovative Team
       </h1>
-      <p class="text-2xl max-w-2xl mx-auto animate-fade-in-up hero-text">
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto animate-fade-in-up hero-text">
         Passionate experts dedicated to revolutionizing gem detection technology
       </p>
     </div>
   </section>
 
   <!-- Team Members Section -->
-  <section class="py-16  relative overflow-hidden test">
+  <section class="py-16 relative overflow-hidden test">
     <!-- Video Background for Team Section -->
     <video autoplay muted loop class="team-video-background">
-      <source src="C:\Users\kaaki\Desktop\SDGP WebSite\Old\SDGP-Web-main\Resources\16723255-uhd_3840_2160_60fps.mp4" type="video/mp4">
+      <source src="Resources/16723255-uhd_3840_2160_60fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container mx-auto px-4 relative z-10">
       <!-- First Row: 4 Boxes -->
-      <div class="grid md:grid-cols-4 gap-4 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
         <!-- Team Member 1 -->
         <div class="team-card text-center cursor-pointer holder" onclick="openModal('Irushi Hettiarachchi', 'isha.tnja02@gmail.com', 'https://github.com/shavi-shavi','https://www.linkedin.com/in/irushi-shavindya-2076702aa?', 'I am a passionate back-end developer specializing in machine learning and database management. As the team leader of this project, I have focused on building a smart and efficient system for gemstone detection  and water scanning. My expertise lies in developing AI models, optimizing databases, and ensuring seamless data processing. I thrive on solving complex problems and turning raw data into meaningful insights, making technology work smarter for real-world applications.', 'Resources/Irushi .jpg')">
           <img src="Resources/Irushi .jpg" alt="Irushi Hettiarachchi">
@@ -267,7 +322,7 @@
       </div>
 
       <!-- Second Row: 2 Boxes -->
-      <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
         <!-- Team Member 5 -->
         <div class="team-card text-center cursor-pointer holder" onclick="openModal('Muhammadhu Innam Shadhir', 'shadhir.20232297@iit.ac.lk', 'https://github.com/Sadir77', 'https://www.linkedin.com/in/sadhir-innam-679b38336/', 'I am a back-end developer and API specialist with a strong passion for building scalable and efficient systems. In this project, I focused on developing the core backend architecture, handling data processing, and implementing machine learning models for accurate predictions. Additionally, I designed and optimized APIs to ensure seamless communication between the front-end and back-end, making data accessible in a fast and reliable way. My goal is to create robust, high-performance systems that power intelligent applications.', 'Resources/Sadeer .jpg')">
           <img src="Resources/Sadeer .jpg" alt="Sadeer">
@@ -288,13 +343,13 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6 footer">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <div class="flex items-center">
         <i class="far fa-copyright mr-2"></i>
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
       <div>
-        <ul class="flex space-x-4">
+        <ul class="flex flex-wrap space-x-4">
           <li><a href="#" class="hover:text-gray-400 flex items-center">
             <i data-feather="lock" class="mr-2 h-5 w-5"></i>
             Privacy Policy
@@ -312,18 +367,17 @@
     </div>
   </footer>
 
-
   <!-- Modal -->
   <div id="teamModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal" onclick="closeModal()">
-    <div class="modal-gradient text-white p-8 rounded-lg w-11/12 md:w-2/3 lg:w-1/2 flex modal-content" onclick="event.stopPropagation()"> <!-- Increased modal width -->
+    <div class="modal-gradient text-white p-4 md:p-8 rounded-lg w-11/12 md:w-2/3 lg:w-1/2 flex flex-col md:flex-row modal-content" onclick="event.stopPropagation()">
       <div class="flex-1">
         <button onclick="closeModal()" class="absolute top-2 right-2 text-white hover:text-gray-300"><i class="fas fa-times"></i></button>
         <div id="modalContent">
           <!-- Dynamic content will be inserted here -->
         </div>
       </div>
-      <div id="modalImage" class="w-1/3 ml-8 rounded-full overflow-hidden hidden md:block">
-        <img src="" alt="Member Photo" class="w-full h-full object-cover rounded-full"> <!-- Rounded profile image -->
+      <div id="modalImage" class="w-48 h-48 md:w-1/3 mx-auto md:ml-8 mt-4 md:mt-0 rounded-full overflow-hidden block">
+        <img src="" alt="Member Photo" class="w-full h-full object-cover rounded-full">
       </div>
     </div>
   </div>
@@ -339,11 +393,11 @@
       const modalImage = document.getElementById('modalImage').querySelector('img');
 
       modalContent.innerHTML = `
-        <h2 class="text-3xl font-semibold mb-4">${name}</h2> <!-- Increased text size -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4">${name}</h2>
         <p><strong>Email:</strong> <a href="mailto:${email}" class="text-blue-300 hover:text-blue-100">${email}</a></p>
         <p><strong>GitHub:</strong> <a href="${github}" target="_blank" class="text-blue-300 hover:text-blue-100">${github}</a></p>
         <p><strong>LinkedIn:</strong> <a href="${linkedin}" target="_blank" class="text-blue-300 hover:text-blue-100">${linkedin}</a></p>
-        <p class="mt-4 text-lg">${description}</p> <!-- Increased text size -->
+        <p class="mt-4 text-base md:text-lg">${description}</p>
       `;
 
       modalImage.src = photo; // Set the photo source
@@ -358,6 +412,12 @@
       const modal = document.getElementById('teamModal');
       modal.classList.remove('open');
     }
+    
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenuItems');
+      mobileMenu.classList.toggle('open');
+    });
   </script>
 
 </body>

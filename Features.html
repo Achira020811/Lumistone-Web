@@ -8,120 +8,124 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-    <!-- Added Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Added Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1a202c;
+        padding: 1rem;
+        width: 100%;
+        z-index: 50;
+      }
+      
+      .mobile-menu li {
+        margin: 0.5rem 0;
+      }
+      
+      .hidden-menu {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body class="font-sans antialiased text-gray-900">
-  <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header ">
+  <header class="bg-gray-900 text-white py-4 px-6 #FBCFE8 header">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
         <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
         <a href="Home.html" class="text-lg font-medium">LumiStone</a>
       </div>
-      <nav>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <i data-feather="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+      <nav class="hidden md:block">
         <ul class="flex space-x-4">
           <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
-          <li><a href="intro.html" class="hover:text-gray-400  flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
           <li><a href="features.html" class="hover:text-gray-400 active flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
           <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>About Us</a></li>
           <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
         </ul>
       </nav>
+      <div id="mobile-menu" class="hidden-menu md:hidden">
+        <ul class="mobile-menu">
+          <li><a href="Home.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
+          <li><a href="features.html" class="hover:text-gray-400 active flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>About Us</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden">
+    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-12 md:py-16 hero1 relative overflow-hidden">
       <div class="absolute inset-0 opacity-70">
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0 ">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0">
           <source src="Resources/vecteezy_diamond-4k-wedding-background_1804491.mp4" type="video/mp4">
         </video>
       </div>
       <div class="container mx-auto px-4 text-center text-white relative z-10">
-        <h1 class="text-4xl font-bold mb-4 flex justify-center items-center">
-          <i class="fas fa-broadcast-tower text-white-500 mr-4"></i>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 flex flex-col md:flex-row justify-center items-center">
+          <i class="fas fa-broadcast-tower text-white-500 mb-2 md:mb-0 md:mr-4"></i>
           Comprehensive Gem Detection Features
         </h1>
-        <p class="text-xl max-w-2xl mx-auto mb-8">Advanced technology designed to revolutionize gem exploration and identification</p>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 md:mb-8">Advanced technology designed to revolutionize gem exploration and identification</p>
       </div>
     </section>
 
-    <section class="py-16 test  ">
-      <div class="container mx-auto px-4 ">
-        <div class="grid md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h2 class="text-3xl font-bold mb-6 flex items-center" id="WaterLevelDetection">
+    <section class="py-12 md:py-16 test">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+          <div class="order-2 md:order-1">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center" id="WaterLevelDetection">
               <i class="fas fa-search-plus text-blue-500 mr-4"></i>
               Water Level Detection 
-
             </h2>
             <p class="text-gray-600 mb-4"> Our Water Level Detector is designed to help gem miners locate underground water sources before excavation. Using advanced scanning technology, it can detect water presence up to 300 meters deep and provide precise depth measurements. This prevents unexpected flooding, reduces unnecessary drilling costs, and ensures safer and more efficient mining operations.
             </p>
             <p class="text-gray-600 mb-4">By identifying water sources beforehand, miners can strategically plan their excavation sites, optimize resource usage, and avoid potential hazards. Whether for small-scale prospecting or large mining operations, our technology ensures that every dig is informed, efficient, and risk-free.</p>
-            <!-- <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li class="flex items-center"><i class="fas fa-bolt text-yellow-500 mr-2"></i>Electromagnetic frequency scanning</li>
-              <li class="flex items-center"><i class="fas fa-temperature-high text-red-500 mr-2"></i>Thermal differential analysis</li>
-              <li class="flex items-center"><i class="fas fa-gem text-green-500 mr-2"></i>Mineral composition recognition</li>
-              <li class="flex items-center"><i class="fas fa-radar text-purple-500 mr-2"></i>Ground penetrating radar integration</li>
-            </ul> -->
           </div>
-          <div>
-            <img src="Resources/Water level detection .png" alt="Intelligent Algorithms" class="w-0.8 rounded-lg shadow-lg object-cover h-96">
+          <div class="order-1 md:order-2 mb-6 md:mb-0 flex justify-center md:justify-end">
+            <img src="Resources/Water level detection .png" alt="Intelligent Algorithms" class="w-full max-w-md md:w-0.8 rounded-lg shadow-lg object-cover h-64 md:h-96">
           </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <img src="Resources/Gem detect.png" alt="Intelligent Algorithms" class="w-0.9 rounded-lg shadow-lg object-cover h-96">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+          <div class="order-1 mb-6 md:mb-0 flex justify-center md:justify-start">
+            <img src="Resources/Gem detect.png" alt="Intelligent Algorithms" class="w-full max-w-md md:w-0.9 rounded-lg shadow-lg object-cover h-64 md:h-96">
           </div>
-          <div>
-            <h2 class="text-3xl font-bold mb-6 flex items-center" id="GemDetection">
+          <div class="order-2">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center" id="GemDetection">
               <i class="fas fa-shield-alt text-blue-500 mr-4"></i>
               Gem detection
-
             </h2>
             <p class="text-gray-600 mb-4">Our Gem Detection System is designed to revolutionize the way miners and prospectors locate valuable gemstones hidden beneath the surface. Using advanced magnetic and resistivity scanning technology, it can accurately detect potential gem-rich areas up to 300 meters underground. This powerful system provides crucial insights into mineral concentrations, helping miners identify the best excavation sites before digging begins.
             </p>
             <p class="text-gray-600 mb-4">Traditional mining often relies on trial and error, leading to unnecessary excavation, wasted resources, and increased costs. Our technology eliminates this guesswork by offering precise real-time location data, allowing miners to focus their efforts on high-potential zones with a greater likelihood of success. This not only increases the chances of discovering valuable gemstones but also reduces environmental disruption by minimizing unnecessary land disturbance.</p>
-            <!-- <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li class="flex items-center"><i class="fas fa-water text-blue-500 mr-2"></i>Water-resistant up to 50 meters</li>
-              <li class="flex items-center"><i class="fas fa-dumbbell text-yellow-500 mr-2"></i>Shock-proof construction</li>
-              <li class="flex items-center"><i class="fas fa-temperature-high text-red-500 mr-2"></i>Temperature range: -20°C to 50°C</li>
-              <li class="flex items-center"><i class="fas fa-hard-hat text-gray-500 mr-2"></i>Military-grade exterior materials</li>
-            </ul> -->
           </div>
         </div>
-
-        <!-- <div class="grid md:grid-cols-2 gap-12">
-          <div>
-            <h2 class="text-3xl font-bold mb-6 flex items-center" id="technology">
-              <i class="fas fa-microchip text-blue-500 mr-4"></i>
-              Smart Technological Integration
-            </h2>
-            <p class="text-gray-600 mb-4">Intelligent algorithms and real-time data processing set our technology apart:</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li class="flex items-center"><i class="fas fa-brain text-green-500 mr-2"></i>AI-powered gem identification</li>
-              <li class="flex items-center"><i class="fas fa-map-marked-alt text-red-500 mr-2"></i>Real-time geological mapping</li>
-              <li class="flex items-center"><i class="fas fa-cloud text-blue-500 mr-2"></i>Cloud synchronization</li>
-              <li class="flex items-center"><i class="fas fa-chart-line text-yellow-500 mr-2"></i>Machine learning enhancement</li>
-            </ul>
-          </div>
-          <div>
-            <img src="Resources/" alt="Rugged & Reliable Design" class="w-full rounded-lg shadow-lg object-cover h-96">
-          </div>
-        </div>
-      </div> -->
+      </div>
     </section>
   </main>
 
   <footer class="bg-gray-900 text-white py-6 footer">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <div class="flex items-center">
         <i class="far fa-copyright mr-2"></i>
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
       <div>
-        <ul class="flex space-x-4">
+        <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
           <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
           <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
           <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
@@ -129,9 +133,27 @@
       </div>
     </div>
   </footer>
+  
   <!-- Initialize Feather Icons -->
   <script>
     feather.replace();
+    
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('hidden-menu')) {
+        mobileMenu.classList.remove('hidden-menu');
+      } else {
+        mobileMenu.classList.add('hidden-menu');
+      }
+    });
+    
+    // Close menu on window resize if screen becomes large
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        document.getElementById('mobile-menu').classList.add('hidden-menu');
+      }
+    });
   </script>
 </body>
 </html>
