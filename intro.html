@@ -8,43 +8,42 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <!-- Added Feather Icons -->
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     @media (max-width: 768px) {
-      /* Ensure the header has a relative position */
       header {
         position: relative;
       }
-  
-      /* Position the mobile menu absolutely */
       .mobile-menu {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Position below the header */
+        top: 100%;
         right: 0;
         background-color: #903763;
         padding: 1rem;
         width: 100%;
         z-index: 50;
       }
-  
       .mobile-menu li {
         margin: 0.5rem 0;
       }
-  
       .hidden-menu {
         display: none;
       }
-  
-      /* Ensure the button doesn't move */
       #menu-toggle {
         position: absolute;
-        right: 1rem; /* Adjust as needed */
-        top: 50%; /* Center vertically */
+        right: 1rem;
+        top: 50%;
         transform: translateY(-50%);
       }
+      .footer-link:hover {
+      color: #9085C7;
+    }
     }
   </style>
 </head>
@@ -82,7 +81,7 @@
   </header>
 
   <main>
-    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden">
+    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden" data-aos="fade-up">
       <div class="absolute inset-0 opacity-70">
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0">
           <source src="Resources/vecteezy_diamond-4k-wedding-background_1804491.mp4" type="video/mp4">
@@ -98,52 +97,46 @@
     </section>
     
     <section class="test">
-      <section class="py-12 md:py-16">
+      <section class="py-12 md:py-16" data-aos="fade-up">
         <div class="container mx-auto px-4">
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
+            <div data-aos="fade-right">
               <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
                 <i data-feather="aperture" class="mr-4 h-6 w-6 md:h-8 md:w-8 text-blue-600"></i>
                 Water level detection
               </h2>
-              
               <ul class="list-disc list-inside text-gray-600 space-y-2">
                 <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Understanding Resistivity: </li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Different materials (rock, soil, water) conduct electricity differently.
-          High resistivity → Dry soil, rock.
-          Low resistivity → Water-saturated zones.
-        </pre>
+High resistivity → Dry soil, rock.
+Low resistivity → Water-saturated zones.</pre>
                 <li class="flex items-center"><i data-feather="thermometer" class="mr-2 h-5 w-5 text-red-500"></i>Collecting Data: </li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Use an electrical resistivity meter to send current underground.
-Measure how much resistance the ground offers.
-              </pre>
+Measure how much resistance the ground offers.</pre>
                 <li class="flex items-center"><i data-feather="compass" class="mr-2 h-5 w-5 text-green-500"></i>Interpreting Resistivity Profiles:</li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Shallow depths with low resistivity → Possible surface water or wet soil.
-Deeper low-resistivity layers → Indicate a groundwater table.
-              </pre>
-                <li class="flex items-center"><i data-feather="database" class="mr-2 h-5 w-5 text-purple-500"></i>Estimating Water Depth:
-                </li>
+Deeper low-resistivity layers → Indicate a groundwater table.</pre>
+                <li class="flex items-center"><i data-feather="database" class="mr-2 h-5 w-5 text-purple-500"></i>Estimating Water Depth:</li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Identify the depth at which resistivity drops significantly.
-Cross-check with borehole data if available for accuracy.
-                                         </pre>
+Cross-check with borehole data if available for accuracy.</pre>
                 <li class="flex items-center"><i data-feather="zap" class="mr-2 h-5 w-5 text-yellow-500"></i>Final Output: </li> 
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Depth of water is estimated by correlating low-resistivity zones with known geological data.</pre>                                
               </ul>
             </div>
-            <div class="order-first md:order-last mt-4 md:mt-0">
+            <div class="order-first md:order-last mt-4 md:mt-0" data-aos="fade-left">
               <img src="Resources/Water detection .jpg" alt="Multi-Spectral Sensors" class="w-full rounded-lg shadow-lg object-cover h-64 md:h-96 opacity-80">
             </div>
           </div>
         </div>
       </section>
 
-      <section class="py-12 md:py-16">
+      <section class="py-12 md:py-16" data-aos="fade-up">
         <div class="container mx-auto px-4">
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="order-last md:order-first mt-4 md:mt-0">
+            <div class="order-last md:order-first mt-4 md:mt-0" data-aos="fade-right">
               <img src="Resources/gem detection .jpg" alt="Intelligent Algorithms" class="w-full rounded-lg shadow-lg object-cover h-64 md:h-96 opacity-80">
             </div>
-            <div>
+            <div data-aos="fade-left">
               <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
                 <i data-feather="cpu" class="mr-4 h-6 w-6 md:h-8 md:w-8 text-blue-600"></i>
                 Gem detection
@@ -154,14 +147,12 @@ Cross-check with borehole data if available for accuracy.
 Surrounding rocks may also create unique magnetic anomalies.</pre>
                 <li class="flex items-center"><i data-feather="trending-up" class="mr-2 h-5 w-5 text-blue-500"></i>Collecting Magnetic Data</li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Use a magnetometer to measure variations in Earth's magnetic field.
-Conduct surveys in a grid pattern to map magnetic intensity. 
-              </pre>
+Conduct surveys in a grid pattern to map magnetic intensity.</pre>
                 <li class="flex items-center"><i data-feather="map" class="mr-2 h-5 w-5 text-red-500"></i>Identifying Anomalies </li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">High magnetic readings → Presence of iron-rich minerals 
 (possible gem indicators).
 Low magnetic areas → Non-magnetic host rocks.
-Sharp variations may indicate faults or mineral deposits where gems form.
-              </pre>
+Sharp variations may indicate faults or mineral deposits where gems form.</pre>
                 <li class="flex items-center"><i data-feather="cloud" class="mr-2 h-5 w-5 text-indigo-500"></i>Determining Gem Location </li>
                 <pre class="text-gray-600 mb-4 text-sm md:text-base overflow-x-auto whitespace-pre-wrap">Compare magnetic anomalies with geological maps.
 Correlate with resistivity and ground-penetrating radar (GPR) for accuracy.
@@ -174,7 +165,7 @@ Drill test samples in high anomaly zones to confirm gem presence.</pre>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-white py-6 footer">
+  <footer class="bg-gray-900 text-white py-6 footer" data-aos="fade-up">
     <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <div class="flex items-center">
         <i class="far fa-copyright mr-2"></i>
@@ -182,18 +173,22 @@ Drill test samples in high anomaly zones to confirm gem presence.</pre>
       </div>
       <div>
         <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <!-- Initialize Feather Icons -->
+  <!-- Initialize Feather Icons and AOS -->
   <script>
     feather.replace();
-    
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
     // Mobile menu toggle
     document.getElementById('menu-toggle').addEventListener('click', function() {
       const mobileMenu = document.getElementById('mobile-menu');
@@ -203,7 +198,7 @@ Drill test samples in high anomaly zones to confirm gem presence.</pre>
         mobileMenu.classList.add('hidden-menu');
       }
     });
-    
+
     // Close menu on window resize if screen becomes large
     window.addEventListener('resize', function() {
       if (window.innerWidth >= 768) {
