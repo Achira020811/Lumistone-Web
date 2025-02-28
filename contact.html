@@ -8,8 +8,96 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-   <!-- Added Feather Icons -->
-   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    /* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hero1 {
+  animation-delay: 0.2s;
+}
+
+.test {
+  animation-delay: 0.5s;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-icon {
+  animation: pulse 2s infinite;
+}
+
+/* Hover Effects */
+.contact-button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  background-color: #7a6fbb;
+}
+
+a:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Mobile Menu Animation */
+#nav-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-100%);
+  opacity: 0;
+  display: none;
+}
+
+#nav-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  display: block;
+}
+/* Background Video Zoom */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.hero1 video {
+  animation: zoom 10s infinite alternate ease-in-out;
+}
+.footer-link:hover {
+      color: #9085C7;
+    }
+  </style>
 </head>
 <body class="font-sans antialiased text-gray-900">
   <header class="bg-gray-900 text-white py-4 px-6 header">
@@ -21,7 +109,7 @@
       <button id="mobile-menu-button" class="md:hidden flex items-center text-white focus:outline-none">
         <i data-feather="menu" class="h-6 w-6"></i>
       </button>
-      <nav id="nav-menu" class="hidden md:block w-full md:w-auto absolute md:relative top-16 md:top-0 left-0 md:left-auto header md:bg-transparent z-50 py-4 md:py-0 px-6 md:px-0 w-full md:w-auto">
+      <nav id="nav-menu" class="hidden md:block w-full md:w-auto absolute md:relative top-16 md:top-0 left-0 md:left-auto header md:bg-transparent z-50 py-4 md:py-0 px-6 md:px-0">
         <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
           <li><a href="index.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
           <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
@@ -34,7 +122,7 @@
   </header>
 
   <main>
-    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden">
+    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 hero1 relative overflow-hidden fade-in">
       <div class="absolute inset-0 opacity-70">
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0">
           <source src="Resources/vecteezy_diamond-4k-wedding-background_1804491.mp4" type="video/mp4">
@@ -42,19 +130,19 @@
       </div>
       <div class="container mx-auto px-4 text-center text-white relative z-10">
         <h1 class="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center">
-          <i class="fas fa-headset mr-4"></i>
+          <i class="fas fa-headset mr-4 pulse-icon"></i>
           Customer Support
         </h1>
         <p class="text-lg md:text-xl max-w-2xl mx-auto">We're here to help you get the most out of your Gem Detector experience</p>
       </div>
     </section>
 
-    <section class="py-8 md:py-16 test">
+    <section class="py-8 md:py-16 test fade-in">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center">
-              <i class="fas fa-book-open text-[#9085C7] mr-4"></i>
+              <i class="fas fa-book-open text-[#9085C7] mr-4 pulse-icon"></i>
               Support Resources
             </h2>
             <div class="space-y-4">
@@ -95,7 +183,7 @@
           </div>
           <div>
             <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center mt-8 md:mt-0">
-              <i class="fas fa-life-ring text-[#9085C7] mr-4"></i>
+              <i class="fas fa-life-ring text-[#9085C7] mr-4 pulse-icon"></i>
               Contact Support
             </h2>
             <form class="bg-gray-50 p-4 md:p-8 rounded-lg holders">
@@ -151,43 +239,48 @@
   </main>
 
   <footer class="bg-gray-900 text-white py-6 footer">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <div class="flex items-center mb-4 md:mb-0">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div class="flex items-center">
         <i class="far fa-copyright mr-2"></i>
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
       <div>
-        <ul class="flex flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-4">
-          <li class="w-full md:w-auto text-center"><a href="#" class="hover:text-gray-400 flex items-center justify-center md:justify-start"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
-          <li class="w-full md:w-auto text-center"><a href="#" class="hover:text-gray-400 flex items-center justify-center md:justify-start"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
-          <li class="w-full md:w-auto text-center"><a href="contact.html" class="hover:text-gray-400 flex items-center justify-center md:justify-start"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
+        <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
-  
+
   <!-- Initialize Feather Icons -->
   <script>
     feather.replace();
-    
+
     // Mobile menu toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const navMenu = document.getElementById('nav-menu');
-      
-      mobileMenuButton.addEventListener('click', function() {
-        navMenu.classList.toggle('hidden');
-      });
-      
-      // Close menu when window is resized to desktop size
-      window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) { // 768px is the 'md' breakpoint in Tailwind
-          navMenu.classList.remove('hidden');
-        } else {
-          navMenu.classList.add('hidden');
-        }
-      });
-    });
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const navMenu = document.getElementById('nav-menu');
+
+  mobileMenuButton.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    if (navMenu.classList.contains('active')) {
+      navMenu.style.display = 'block';
+    } else {
+      navMenu.style.display = 'none';
+    }
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+      navMenu.classList.remove('active');
+      navMenu.style.display = 'block';
+    } else {
+      navMenu.style.display = 'none';
+    }
+  });
+});
   </script>
 </body>
 </html>

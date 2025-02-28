@@ -46,6 +46,51 @@
         transform: translateY(-50%);
       }
     }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Apply animation to elements */
+    .animate-fade-in {
+      opacity: 0; /* Start invisible */
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    /* Delay animations for staggered effect */
+    .animate-delay-1 {
+      animation-delay: 0.5s;
+    }
+
+    .animate-delay-2 {
+      animation-delay: 1s;
+    }
+
+    .animate-delay-3 {
+      animation-delay: 1.5s;
+    }
+
+    /* Ensure animations work on scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .footer-link:hover {
+      color: #9085C7;
+    }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-900">
@@ -82,67 +127,65 @@
   </header>
 
   <main>
-    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-12 md:py-16 hero1 relative overflow-hidden">
+    <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-12 md:py-16 hero1 relative overflow-hidden animate-on-scroll">
       <div class="absolute inset-0 opacity-70">
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 z-0">
           <source src="Resources/vecteezy_diamond-4k-wedding-background_1804491.mp4" type="video/mp4">
         </video>
       </div>
       <div class="container mx-auto px-4 text-center text-white relative z-10">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4 flex flex-col md:flex-row justify-center items-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 flex flex-col md:flex-row justify-center items-center animate-fade-in">
           <i class="fas fa-broadcast-tower text-white-500 mb-2 md:mb-0 md:mr-4"></i>
           Comprehensive Gem Detection Features
         </h1>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 md:mb-8">Advanced technology designed to revolutionize gem exploration and identification</p>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6 md:mb-8 animate-fade-in animate-delay-1">Advanced technology designed to revolutionize gem exploration and identification</p>
       </div>
     </section>
 
     <section class="py-12 md:py-16 test">
       <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12 animate-on-scroll">
           <div class="order-2 md:order-1">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center" id="WaterLevelDetection">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center animate-fade-in" id="WaterLevelDetection">
               <i class="fas fa-search-plus text-blue-500 mr-4"></i>
               Water Level Detection 
             </h2>
-            <p class="text-gray-600 mb-4"> Our Water Level Detector is designed to help gem miners locate underground water sources before excavation. Using advanced scanning technology, it can detect water presence up to 300 meters deep and provide precise depth measurements. This prevents unexpected flooding, reduces unnecessary drilling costs, and ensures safer and more efficient mining operations.
-            </p>
-            <p class="text-gray-600 mb-4">By identifying water sources beforehand, miners can strategically plan their excavation sites, optimize resource usage, and avoid potential hazards. Whether for small-scale prospecting or large mining operations, our technology ensures that every dig is informed, efficient, and risk-free.</p>
+            <p class="text-gray-600 mb-4 animate-fade-in animate-delay-1">Our Water Level Detector is designed to help gem miners locate underground water sources before excavation. Using advanced scanning technology, it can detect water presence up to 300 meters deep and provide precise depth measurements. This prevents unexpected flooding, reduces unnecessary drilling costs, and ensures safer and more efficient mining operations.</p>
+            <p class="text-gray-600 mb-4 animate-fade-in animate-delay-2">By identifying water sources beforehand, miners can strategically plan their excavation sites, optimize resource usage, and avoid potential hazards. Whether for small-scale prospecting or large mining operations, our technology ensures that every dig is informed, efficient, and risk-free.</p>
           </div>
-          <div class="order-1 md:order-2 mb-6 md:mb-0 flex justify-center md:justify-end">
+          <div class="order-1 md:order-2 mb-6 md:mb-0 flex justify-center md:justify-end animate-fade-in animate-delay-1">
             <img src="Resources/Water level detection .png" alt="Intelligent Algorithms" class="w-full max-w-md md:w-0.8 rounded-lg shadow-lg object-cover h-64 md:h-96">
           </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
-          <div class="order-1 mb-6 md:mb-0 flex justify-center md:justify-start">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12 animate-on-scroll">
+          <div class="order-1 mb-6 md:mb-0 flex justify-center md:justify-start animate-fade-in animate-delay-1">
             <img src="Resources/Gem detect.png" alt="Intelligent Algorithms" class="w-full max-w-md md:w-0.9 rounded-lg shadow-lg object-cover h-64 md:h-96">
           </div>
           <div class="order-2">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center" id="GemDetection">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex items-center animate-fade-in" id="GemDetection">
               <i class="fas fa-shield-alt text-blue-500 mr-4"></i>
               Gem detection
             </h2>
-            <p class="text-gray-600 mb-4">Our Gem Detection System is designed to revolutionize the way miners and prospectors locate valuable gemstones hidden beneath the surface. Using advanced magnetic and resistivity scanning technology, it can accurately detect potential gem-rich areas up to 300 meters underground. This powerful system provides crucial insights into mineral concentrations, helping miners identify the best excavation sites before digging begins.
-            </p>
-            <p class="text-gray-600 mb-4">Traditional mining often relies on trial and error, leading to unnecessary excavation, wasted resources, and increased costs. Our technology eliminates this guesswork by offering precise real-time location data, allowing miners to focus their efforts on high-potential zones with a greater likelihood of success. This not only increases the chances of discovering valuable gemstones but also reduces environmental disruption by minimizing unnecessary land disturbance.</p>
+            <p class="text-gray-600 mb-4 animate-fade-in animate-delay-1">Our Gem Detection System is designed to revolutionize the way miners and prospectors locate valuable gemstones hidden beneath the surface. Using advanced magnetic and resistivity scanning technology, it can accurately detect potential gem-rich areas up to 300 meters underground. This powerful system provides crucial insights into mineral concentrations, helping miners identify the best excavation sites before digging begins.</p>
+            <p class="text-gray-600 mb-4 animate-fade-in animate-delay-2">Traditional mining often relies on trial and error, leading to unnecessary excavation, wasted resources, and increased costs. Our technology eliminates this guesswork by offering precise real-time location data, allowing miners to focus their efforts on high-potential zones with a greater likelihood of success. This not only increases the chances of discovering valuable gemstones but also reduces environmental disruption by minimizing unnecessary land disturbance.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-white py-6 footer">
+  <footer class="bg-gray-900 text-white py-6 footer animate-on-scroll">
     <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <div class="flex items-center">
+      <div class="flex items-center animate-fade-in">
         <i class="far fa-copyright mr-2"></i>
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
-      <div>
+      <div class="animate-fade-in animate-delay-1">
         <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
@@ -167,6 +210,33 @@
       if (window.innerWidth >= 768) {
         document.getElementById('mobile-menu').classList.add('hidden-menu');
       }
+    });
+
+    // Improved function to check if an element is partially or fully in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0 // Check if the element is partially or fully visible
+      );
+    }
+
+    // Function to add the 'visible' class when elements are in the viewport
+    function handleScrollAnimations() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach((element) => {
+        if (isInViewport(element)) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    // Add event listener for scroll
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Trigger animations on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      handleScrollAnimations();
     });
   </script>
 </body>
