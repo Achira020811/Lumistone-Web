@@ -12,24 +12,38 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     @media (max-width: 768px) {
+      /* Ensure the header has a relative position */
+      header {
+        position: relative;
+      }
+  
+      /* Position the mobile menu absolutely */
       .mobile-menu {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 100%; /* Position below the header */
         right: 0;
-        background-color: #1a202c;
+        background-color: #903763;
         padding: 1rem;
         width: 100%;
         z-index: 50;
       }
-      
+  
       .mobile-menu li {
         margin: 0.5rem 0;
       }
-      
+  
       .hidden-menu {
         display: none;
+      }
+  
+      /* Ensure the button doesn't move */
+      #menu-toggle {
+        position: absolute;
+        right: 1rem; /* Adjust as needed */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%);
       }
     }
   </style>
