@@ -10,12 +10,132 @@
   <link href="style.css" rel="stylesheet">
   <!-- Added Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    /* Custom CSS for animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .button-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .bounce-icon {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .hero {
+      background: linear-gradient(270deg, #E49CB4, #9085C7, #E49CB4);
+      background-size: 200% 200%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .typing-effect {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end);
+    }
+
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-link {
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: #9085C7;
+    }
+
+    .logo {
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: rotate(15deg);
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      animation: fadeInOverlay 2s ease-in-out;
+    }
+
+    @keyframes fadeInOverlay {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="font-sans antialiased text-gray-900">
   <header class="bg-gray-900 text-white py-4 px-6 header">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
-        <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
+        <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4 logo">
         <a href="index.html" class="text-lg font-medium">LumiStone</a>
       </div>
       
@@ -73,6 +193,7 @@
   <main>
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-[#E49CB4] to-[#9085C7] py-16 md:py-32 hero relative overflow-hidden h-screen md:h-[85vh]">
+      <div class="video-overlay"></div>
       <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 z-0">
         <source src="Resources/7964955-uhd_3840_2160_25fps.mp4" type="video/mp4">
       </video>
@@ -81,35 +202,37 @@
         <div class="hidden md:block md:w-1/2"></div>
         <!-- Text content -->
         <div class="w-full md:w-1/2 text-center md:text-right pt-8 md:pt-0">
-          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 flex flex-col md:flex-row items-center justify-center md:justify-end">
-            <i data-feather="compass" class="mb-2 md:mb-0 md:mr-4 h-10 w-10"></i>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 flex flex-col md:flex-row items-center justify-center md:justify-end typing-effect">
+            <i data-feather="compass" class="mb-2 md:mb-0 md:mr-4 h-10 w-10 bounce-icon"></i>
             <span>Uncover Hidden Treasures</span>
           </h1>
-          <p class="text-white text-lg mb-6">Revolutionary gem detection technology that transforms your exploration experience. Discover, identify, and map valuable gems with unprecedented accuracy.</p>
+          <p class="text-white text-lg mb-6 fade-in">Revolutionary gem detection technology that transforms your exploration experience. Discover, identify, and map valuable gems with unprecedented accuracy.</p>
           <div class="flex flex-col sm:flex-row justify-center md:justify-end space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="intro.html" class="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center">
-              <i data-feather="book-open" class="mr-2 h-5 w-5"></i>
+            <a href="intro.html" class="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-200 flex items-center justify-center button-hover fade-in">
+              <i data-feather="book-open" class="mr-2 h-5 w-5 "></i>
               Learn More
             </a>
-            <a href="contact.html" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-gray-900 flex items-center justify-center">
+            <a href="contact.html" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-gray-900 flex items-center justify-center button-hover fade-in">
               <i data-feather="send" class="mr-2 h-5 w-5"></i>
               Connect with Us
             </a>
           </div>
         </div>
       </div>
+      
+     
     </section>
 
     <!-- Key Features Section -->
     <section class="test">
-      <section class="py-12 md:py-16">
+      <section class="py-12 md:py-16 fade-in">
         <div class="container mx-auto px-4">
           <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 flex flex-col md:flex-row items-center justify-center">
             <i data-feather="star" class="mb-2 md:mb-0 md:mr-4 h-8 w-8 text-yellow-500"></i>
             Our Key Features
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center feature-card">
               <div class="bg-[#FFFBCB] rounded-full p-4 inline-block mb-4">
                 <i data-feather="radio" class="w-10 h-10 text-[#BA8B02] mx-auto"></i>
               </div>
@@ -120,7 +243,7 @@
                 See More
               </a>
             </div>
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center feature-card">
               <div class="bg-[#CFFAFE] rounded-full p-4 inline-block mb-4">
                 <i data-feather="shield" class="w-10 h-10 text-[#0891B2] mx-auto"></i>
               </div>
@@ -137,7 +260,7 @@
     </section>
 
     <!-- App Connection Section -->
-    <section class="py-12 md:py-16">
+    <section class="py-12 md:py-16 fade-in">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 flex flex-col md:flex-row items-center justify-center">
           <i data-feather="smartphone" class="mb-2 md:mb-0 md:mr-4 h-8 w-8 text-gray-700"></i>
@@ -145,7 +268,7 @@
         </h2>
         <p class="text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8">Download our mobile application to transform your gem hunting experience. Available on Android, our app provides real-time detection, detailed gem reports, and community sharing features.</p>
         <div class="flex justify-center">
-          <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full flex items-center">
+          <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full flex items-center button-hover">
             <i data-feather="download" class="mr-2 h-6 w-6"></i>
             Google Play
           </a>
@@ -162,13 +285,14 @@
       </div>
       <div>
         <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center footer-link"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
+
   <!-- Initialize Feather Icons -->
   <script>
     feather.replace();
@@ -177,6 +301,25 @@
     document.getElementById('menu-toggle').addEventListener('click', function() {
       const mobileMenu = document.getElementById('mobile-menu');
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fade-in animation for sections
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
     });
   </script>
 </body>
