@@ -103,19 +103,56 @@ a:hover {
   <header class="bg-gray-900 text-white py-4 px-6 header">
     <div class="flex justify-between items-center">
       <div class="flex items-center">
-        <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4">
+        <img src="Resources/Logo Crop.png" alt="Logo" class="h-8 mr-4 logo">
         <a href="index.html" class="text-lg font-medium">LumiStone</a>
       </div>
-      <button id="mobile-menu-button" class="md:hidden flex items-center text-white focus:outline-none">
+      
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="lg:hidden focus:outline-none">
         <i data-feather="menu" class="h-6 w-6"></i>
       </button>
-      <nav id="nav-menu" class="hidden md:block w-full md:w-auto absolute md:relative top-16 md:top-0 left-0 md:left-auto header md:bg-transparent z-50 py-4 md:py-0 px-6 md:px-0">
-        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <li><a href="index.html" class="hover:text-gray-400 flex items-center"><i data-feather="home" class="mr-2 h-5 w-5"></i>Home</a></li>
-          <li><a href="intro.html" class="hover:text-gray-400 flex items-center"><i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works</a></li>
-          <li><a href="features.html" class="hover:text-gray-400 flex items-center"><i data-feather="grid" class="mr-2 h-5 w-5"></i>Features</a></li>
-          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center"><i data-feather="users" class="mr-2 h-5 w-5"></i>About Us</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex active items-center"><i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact</a></li>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:block">
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:text-gray-400 active flex items-center">
+            <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
+          </a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works
+          </a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="grid" class="mr-2 h-5 w-5"></i>Features
+          </a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="users" class="mr-2 h-5 w-5"></i>About Us
+          </a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center">
+            <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="lg:hidden">
+      <nav id="mobile-menu" class="hidden pt-4 pb-2">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-gray-400 active flex items-center py-2">
+            <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
+          </a></li>
+          <li><a href="intro.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="info" class="mr-2 h-5 w-5"></i>How It Works
+          </a></li>
+          <li><a href="features.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="grid" class="mr-2 h-5 w-5"></i>Features
+          </a></li>
+          <li><a href="about-team.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="users" class="mr-2 h-5 w-5"></i>About Us
+          </a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center py-2">
+            <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
+          </a></li>
         </ul>
       </nav>
     </div>
