@@ -349,24 +349,14 @@
         <p>2025 Gem Detector. All rights reserved.</p>
       </div>
       <div>
-        <ul class="flex flex-wrap space-x-4">
-          <li><a href="#" class="hover:text-gray-400 flex items-center">
-            <i data-feather="lock" class="mr-2 h-5 w-5"></i>
-            Privacy Policy
-          </a></li>
-          <li><a href="#" class="hover:text-gray-400 flex items-center">
-            <i data-feather="file-text" class="mr-2 h-5 w-5"></i>
-            Terms of Service
-          </a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center">
-            <i data-feather="help-circle" class="mr-2 h-5 w-5"></i>
-            Support
-          </a></li>
+        <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center md:items-start">
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="lock" class="mr-2 h-5 w-5"></i>Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gray-400 flex items-center"><i data-feather="file-text" class="mr-2 h-5 w-5"></i>Terms of Service</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 flex items-center"><i data-feather="help-circle" class="mr-2 h-5 w-5"></i>Support</a></li>
         </ul>
       </div>
     </div>
   </footer>
-
   <!-- Modal -->
   <div id="teamModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 modal" onclick="closeModal()">
     <div class="modal-gradient text-white p-4 md:p-8 rounded-lg w-11/12 md:w-2/3 lg:w-1/2 flex flex-col md:flex-row modal-content" onclick="event.stopPropagation()">
