@@ -329,6 +329,59 @@
     transform: none;
   }
 }
+/* Team Card Animations */
+.team-card {
+    transition: all 0.4s ease;
+    transform-origin: center;
+    animation: cardAppear 0.6s ease-out backwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Stagger the animation for each card */
+.team-card:nth-child(1) { animation-delay: 0.1s; }
+.team-card:nth-child(2) { animation-delay: 0.2s; }
+.team-card:nth-child(3) { animation-delay: 0.3s; }
+.team-card:nth-child(4) { animation-delay: 0.4s; }
+.team-card:nth-child(5) { animation-delay: 0.5s; }
+.team-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover animations */
+.team-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .team-card {
+        animation: none;
+        transition: none;
+    }
+    .team-card:hover {
+        transform: none;
+    }
+    .team-card:hover img {
+        transform: none;
+    }
+}
   </style>
 </head>
 
@@ -498,7 +551,7 @@
       </div>
     </div>
   </div>
-
+  <script src="script.js" defer></script>
   <script>
     // Initialize Feather Icons
     feather.replace();
