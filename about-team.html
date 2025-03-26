@@ -205,6 +205,130 @@
     .footer-link:hover {
       color: #9085C7;
     }
+
+/* Base Responsive Styles */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-text {
+    font-size: 2rem !important;
+    padding: 0 1rem;
+  }
+
+  /* Team Grid */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Team Cards */
+  .team-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0.5rem auto;
+    padding: 1rem;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Modal */
+  .modal-gradient {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #modalImage {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 1rem auto !important;
+  }
+
+  #modalContent {
+    text-align: center;
+  }
+
+  #modalContent h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .team-card {
+    width: 95%;
+  }
+}
+
+/* Video Background Responsiveness */
+@media (max-aspect-ratio: 16/9) {
+  .video-background,
+  .team-video-background {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* Mobile Menu Improvements */
+@media (max-width: 768px) {
+  .mobile-menu-items {
+    background-color: rgba(144, 55, 99, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-menu-items a {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu-items a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Safe Area Insets */
+.container {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* Modal Scroll Fix */
+.modal .modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Loading Performance */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation: none;
+  }
+
+  .team-card:hover {
+    transform: none;
+  }
+}
   </style>
 </head>
 
@@ -313,7 +437,7 @@
         <div class="team-card text-center cursor-pointer holder" onclick="openModal('Achira Senadheera ', 'AchiraUwanpriya@gmail.com', 'https://github.com/Achira020811', 'https://www.linkedin.com/in/achira-senadheera-061535271', 'I am a front-end developer with a passion for building intuitive and visually engaging user interfaces. In this project, I focused on designing and developing the web and mobile application, ensuring a seamless user experience. My work involved integrating the AI-powered backend into a responsive and easy-to-use interface, making complex data insights accessible to users. I strive to create interactive and efficient applications that enhance usability and functionality.', 'Resources/Achira .jpg')">
           <img src="Resources/Achira .jpg" alt="Sarah Thompson">
           <h3 class="text-xl font-semibold flex items-center justify-center"><i class="fas fa-drafting-compass mr-2 text-pink-500"></i>Achira Senadheera </h3>
-          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Web designer/Front End developer 
+          <p class="text-gray-600 mb-2 flex items-center justify-center"><i class="fas fa-cube mr-2 text-gray-500"></i>Web developer/Front End developer 
           </p>
         </div>
         <!-- Team Member 4 -->
