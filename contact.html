@@ -138,7 +138,7 @@ a:hover {
     <div class="lg:hidden">
       <nav id="mobile-menu" class="hidden pt-4 pb-2">
         <ul class="space-y-2">
-          <li><a href="index.html" class="hover:text-gray-400 active flex items-center py-2">
+          <li><a href="index.html" class="hover:text-gray-400 flex items-center py-2">
             <i data-feather="home" class="mr-2 h-5 w-5"></i>Home
           </a></li>
           <li><a href="intro.html" class="hover:text-gray-400 flex items-center py-2">
@@ -150,7 +150,7 @@ a:hover {
           <li><a href="about-team.html" class="hover:text-gray-400 flex items-center py-2">
             <i data-feather="users" class="mr-2 h-5 w-5"></i>About Us
           </a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 flex items-center py-2">
+          <li><a href="contact.html" class="hover:text-gray-400 active flex items-center py-2">
             <i data-feather="mail" class="mr-2 h-5 w-5"></i>Contact
           </a></li>
         </ul>
@@ -292,32 +292,31 @@ a:hover {
   </footer>
 
   <!-- Initialize Feather Icons -->
+  // Replace the existing script section at the bottom of the file
+
   <script>
     feather.replace();
-
+  
     // Mobile menu toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const navMenu = document.getElementById('nav-menu');
-
-  mobileMenuButton.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-    if (navMenu.classList.contains('active')) {
-      navMenu.style.display = 'block';
-    } else {
-      navMenu.style.display = 'none';
-    }
-  });
-
-  window.addEventListener('resize', function() {
-    if (window.innerWidth >= 768) {
-      navMenu.classList.remove('active');
-      navMenu.style.display = 'block';
-    } else {
-      navMenu.style.display = 'none';
-    }
-  });
-});
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      menuToggle.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+  
+      // Handle resize events
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 1024) { // 1024px is the lg breakpoint in Tailwind
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
   </script>
 </body>
 </html>
